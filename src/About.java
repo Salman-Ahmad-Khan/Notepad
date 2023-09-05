@@ -9,14 +9,18 @@ public class About extends JFrame implements ActionListener {
         setBounds(600, 200, 700, 600);
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon("src/icons/windows.png");
-        Image i2 = i1.getImage().getScaledInstance(300, 60, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel headerIcon = new JLabel(i3);
-        headerIcon.setBounds(150, 40, 400, 80);
-        add(headerIcon);
+        ImageIcon notepadIcon = new ImageIcon(ClassLoader.getSystemResource("icons/notepad.png"));
+        Image icon = notepadIcon.getImage();
+        setIconImage(icon);
 
-        ImageIcon i4 = new ImageIcon("src/icons/notepad.png");
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/windows.png"));
+        Image i2 = i1.getImage().getScaledInstance(400, 80, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel l1 = new JLabel(i3);
+        l1.setBounds(150, 40, 400, 80);
+        add(l1);
+
+        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icons/notepad.png"));
         Image i5 = i4.getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
         JLabel l2 = new JLabel(i6);
@@ -24,7 +28,7 @@ public class About extends JFrame implements ActionListener {
         add(l2);
 
         JLabel l3 = new JLabel(
-                "<html> <br><br>Notepad is a word processing program, <br>which allows changing of text in a computer file.<br>Notepad is a simple text editor for basic text-editing program<br> which enables computer users to create documents. </html>");
+                "<html><br><br>Notepad is a word processing program, <br>which allows changing of text in a computer file.<br>Notepad is a simple text editor for basic text-editing program<br> which enables computer users to create documents. </html>");
         l3.setFont(new Font("SAN_SERIF", Font.PLAIN, 18));
         l3.setBounds(150, 130, 500, 300);
         add(l3);
